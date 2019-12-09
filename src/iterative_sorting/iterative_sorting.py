@@ -4,7 +4,6 @@ def selection_sort( arr ):
     for border in range(len(arr) - 1):
         right = border + 1
         left = border
-
         while left >= 0:
             if arr[left] > arr[right]:
                 arr[left], arr[right] = (arr[right], arr[left])
@@ -12,12 +11,19 @@ def selection_sort( arr ):
                 right -= 1
             else:
                 break
-
     return arr
 
 
 # TO-DO:  implement the Bubble Sort function below
 def bubble_sort( arr ):
+    swapped = True # technically a lie
+    while swapped:
+        swapped = False
+        for left in range(len(arr) - 1):
+            right = left + 1
+            if arr[left] > arr[right]:
+                arr[left], arr[right] = (arr[right], arr[left])
+                swapped = True
     return arr
 
 
