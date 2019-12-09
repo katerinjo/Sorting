@@ -1,19 +1,17 @@
 # TO-DO: Complete the selection_sort() function below 
 def selection_sort( arr ):
     # loop through n-1 elements
-    for i in range(0, len(arr) - 1):
-        cur_index = i
-        smallest_index = cur_index
-        # TO-DO: find next smallest element
-        # (hint, can do in 3 loc) 
-             
+    for border in range(0, len(arr) - 1):
+        right = border
+        left = active - 1
 
-
-
-        # TO-DO: swap
-
-
-
+        while left >= 0:
+            if arr[left] > arr[right]:
+                arr[left], arr[right] = (arr[right], arr[left])
+                left -= 1
+                right -= 1
+            else:
+                break
 
     return arr
 
