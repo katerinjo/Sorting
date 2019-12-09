@@ -1,9 +1,9 @@
 # TO-DO: Complete the selection_sort() function below 
 def selection_sort( arr ):
     # loop through n-1 elements
-    for border in range(0, len(arr) - 1):
-        right = border
-        left = active - 1
+    for border in range(len(arr) - 1):
+        right = border + 1
+        left = border
 
         while left >= 0:
             if arr[left] > arr[right]:
@@ -18,7 +18,6 @@ def selection_sort( arr ):
 
 # TO-DO:  implement the Bubble Sort function below
 def bubble_sort( arr ):
-
     return arr
 
 
